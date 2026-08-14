@@ -1,4 +1,4 @@
-# High-Performance Two-Stage Folded-Cascode OTA (0.18µm CMOS)
+# Two-Stage Folded-Cascode OTA (0.18µm CMOS)
 
 ## 📌 1. Project Overview & Specifications
 This repository contains the complete design, transistor-level implementation, and verification of a two-stage folded-cascode Operational Transconductance Amplifier (OTA). Designed in a TSMC 0.18µm CMOS process, the OTA drives a 2pF capacitive load. 
@@ -48,7 +48,7 @@ Meeting the 0.4V lower bound for the OCMR required the output NMOS to have a min
 
 ### Trade-off 2: Power Dissipation vs. Biasing Stability (Current Scaling)
 To crush the 2.5mW power constraint, the static power overhead of the biasing network had to be minimized.
-*   A **Constant-$g_m$ reference core** was designed to operate at an ultra-low reference current ($I_{ref}$) of just **11.3µA**.
+*   A **Constant- $g_m$ reference core** was designed to operate at an ultra-low reference current ($I_{ref}$) of just **11.3µA**.
 *   Utilizing **Current Scaling**, multiplicity factors ($m$ factor up to 20) were used to mirror this micro-current up to the main amplifier stages. 
 *   **Result:** The entire bias circuit consumes a negligible fraction of the total power, securing a final power consumption of **1.18mW** while fully biasing the high-current signal paths.
 
@@ -76,4 +76,4 @@ Tested with a $10 \mu V_{pp}$ sinusoidal input at 20Hz, confirming linear amplif
 ![Transient Response](images/Transient.png)
 
 ---
-*Designed by Huayu Zhang & Futong Yang for UC San Diego ECE 164 (Analog Integrated Circuit Design).*[cite: 2]
+*Designed by Huayu Zhang & Futong Yang for UC San Diego ECE 164 (Analog Integrated Circuit Design).*
